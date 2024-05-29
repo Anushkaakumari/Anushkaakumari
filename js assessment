@@ -1,0 +1,33 @@
+let nfts=[];
+
+function mintNFT(devicename,company, price , color) {
+    const nft = {
+        devicename: devicename,
+        company: company,
+        price: price,
+        color: color
+    };
+    nfts.push(nft);
+}
+function listNFTs() {
+    for (let i = 0; i < nfts.length; i++) {
+        console.log("devicename: " + nfts[i].devicename);
+        console.log("company: " + nfts[i].company);
+        console.log("price: " + nfts[i].price);
+        console.log("Color: " + nfts[i].color);
+        console.log("---------------------------");
+    }
+}
+
+// Print the total number of NFTs we have minted to the console
+function getTotalSupply() {
+    return nfts.length;
+}
+
+// Call your functions below this line
+mintNFT("Mobile", "samsung", "$200","black");
+mintNFT("AC", "Voltas", "$500", "white");
+mintNFT("tv", "micromax", "$1000", "grey");
+
+listNFTs();
+console.log("Total Supply: " + getTotalSupply());
